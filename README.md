@@ -9,7 +9,7 @@ and it takes up less CPU resources when it running. The weather application will
 
 weather need JDK-1.7 or above.
 
-You can get the runable jar file [`weather.jar`](https://github.com/Hongten/weather/tree/master/jar/weather.jar) to run first.
+You can get the runable jar file [`weather.jar`](https://github.com/Hongten/weather/blob/master/jar/weather.jar) (`2.46MB, Save link as... to download`) to run first.
 
 If you run weather applicaiton first time, you may wait a few minutes to get the city code, because the weather application need to parse XML file from [`Yahoo Weather`](https://weather.yahoo.com/) according to the city code.
 
@@ -157,7 +157,7 @@ Second, if we get the city code, then we can get the city weather detail.
 
 > How can we get the city code?
 
-We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click 'Enter'.
+We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click `'Enter'`.
 
 Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(1062617) from URL.
 
@@ -169,7 +169,11 @@ e.g, [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore
 
 and we select first one [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore/) and to find that there are all zones(cities) of `Central Singapore`.
 
-e.g, [`Bukit Timah`](https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/), [`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/)
+e.g, 
+
+[`Bukit Timah`](https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/) - URL is [`https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/`](https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/)
+
+[`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/) - URL is [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/)
 
 We can parse the HTML provided by [`https://weather.yahoo.com/singapore/central-singapore/`](https://weather.yahoo.com/singapore/central-singapore/) to get the city code(24703014, 1062617).
 
