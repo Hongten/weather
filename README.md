@@ -55,7 +55,7 @@ The weather application is a java project, and its structure as below :
 
 ![Example](https://github.com/Hongten/weather/blob/master/image/project_structure.png)
 
-# How can we get weather details from the [`Yahoo Weather`](https://weather.yahoo.com/)?
+> How can we get weather details from the [`Yahoo Weather`](https://weather.yahoo.com/)?
 
 First, we need to know the XML file that the [`Yahoo Weather`](https://weather.yahoo.com/)
 
@@ -155,13 +155,13 @@ Forecast:
 
 Second, if we get the city code, then we can get the city weather detail.
 
-# How can we get the city code?
+> How can we get the city code?
 
 We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click 'Enter'.
 
 Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(1062617) from URL.
 
-# But...., There are so many cities in the world, How can we get the city code for each city?
+> But...., There are so many cities in the world, How can we get the city code for each city?
 
 We can go to [`https://weather.yahoo.com/singapore/`](https://weather.yahoo.com/singapore/) to find that there are all zones(provinces) of `Singapore`.
 
@@ -173,7 +173,7 @@ e.g, [`Bukit Timah`](https://weather.yahoo.com/singapore/north-west/bukit-timah-
 
 We can parse the HTML provided by [`https://weather.yahoo.com/singapore/central-singapore/`](https://weather.yahoo.com/singapore/central-singapore/) to get the city code(24703014, 1062617).
 
-# How to prase the HTML string?
+> How to prase the HTML string?
 
 You can see the method `getCodeString()` in the [`WeatherUtil.java`](https://github.com/Hongten/weather/blob/master/src/com/b510/weather/util/WeatherUtil.java).
 
