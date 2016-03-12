@@ -15,7 +15,7 @@ You can get the runable jar file [`weather.jar`](https://github.com/Hongten/weat
 
 If you run weather applicaiton first time, you may wait a few minutes to get the city code, because the weather application need to parse XML file from [`Yahoo Weather`](https://weather.yahoo.com/) according to the city code.
 
-After you run first time, the country record will be saved in the `c:/weather/weather_country.txt` file and the city code record will be saved in the `c:/weather/weather_code.txt`. The default city is [`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), because weather was created in `**Singapore**`.
+After you run first time, the country record will be saved in the `c:/weather/weather_country.txt` file and the city code record will be saved in the `c:/weather/weather_code.txt`. The default city is [`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), because weather was created in `Singapore`.
 
 # Main Panel
 
@@ -159,9 +159,9 @@ Second, if we get the city code, then we can get the city weather detail.
 
 > How can we get the city code?
 
-We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click `'Enter'`.
+We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click `Enter`.
 
-Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(1062617) from URL.
+Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(**1062617**) from URL.
 
 > But...., There are so many cities in the world, How can we get the city code for each city?
 
