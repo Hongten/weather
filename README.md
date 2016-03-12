@@ -9,7 +9,7 @@ and it takes up less CPU resources when it running. The weather application will
 
 weather need JDK-1.7 or above.
 
-You can get the runable jar file [`weather.jar`](https://github.com/Hongten/weather/blob/master/jar/weather.jar) (`2.46MB, Save link as... to download`) to run first.
+You can get the runable jar file [`weather.jar`](https://github.com/Hongten/weather/blob/master/jar/weather.jar) (`~2.46MB, Save link as... to download`) to run first.
 
 If you run weather applicaiton first time, you may wait a few minutes to get the city code, because the weather application need to parse XML file from [`Yahoo Weather`](https://weather.yahoo.com/) according to the city code.
 
