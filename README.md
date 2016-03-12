@@ -17,21 +17,21 @@ After you run first time, the country record will be saved in the `c:/weather/we
 
 # Main Panel
 
-The main panel includes search zone, current weather details and forcast next three days infromation.
+The main panel includes `search zone`, `current weather details` and `forcast next three days infromation`.
 
-You can type the city name, and click 'Search' button to get the city weather details.
+You can type the city name, and click `'Search'` button to get the city weather details.
 
 ![Example](https://github.com/Hongten/weather/blob/master/image/main_panel.png)
 
 # Show City
 
-'CTRL + M' will open show city panel to show all countries, provinces, cities.
+`'CTRL + M'` will open show city panel to show all `countries, provinces, cities`.
 
 ![Example](https://github.com/Hongten/weather/blob/master/image/show_city_panel.png)
 
 When you select one city record and double click it, then the weather application will show this city weather detail in the main panel.
 
-If the city(e.g, imphal, manipur, india) can not be find, the weather application will inform user as below information.
+If the city(e.g, `imphal, manipur, india`) can not be find, the weather application will inform user as below information.
 
 ![Example](https://github.com/Hongten/weather/blob/master/image/can_not_find_city_imphal.png)
 
@@ -39,7 +39,7 @@ If the city(e.g, imphal, manipur, india) can not be find, the weather applicatio
 
 # Change Skin Panel
 
-When you click the upper left corner of weather application, you can set skin, theme and watermarks etc.
+When you click the upper left corner of weather application, you can set `skin`, `theme` and `watermarks` etc.
 
 ![Example](https://github.com/Hongten/weather/blob/master/image/change_skin_panel.png)
 
@@ -57,10 +57,10 @@ The weather application is a java project, and its structure as below :
 
     > How can we get weather details from the [`Yahoo Weather`](https://weather.yahoo.com/)?
 
-	First, we need to know the XML file that the [`Yahoo Weather`](https://weather.yahoo.com/)
-	
-	e.g, [http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617](http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617), this URL is get the Singapore weather details.
-	The important thing is city code(1062617).
+First, we need to know the XML file that the [`Yahoo Weather`](https://weather.yahoo.com/)
+
+e.g, [http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617](http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617), this URL is get the Singapore weather details.
+The important thing is city code(1062617).
 
     ```xml
 	<rss xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" version="2.0">
@@ -115,32 +115,32 @@ The weather application is a java project, and its structure as below :
 	-->
 	```
 	
-	City name and country name:
-	
+City name and country name:
+
 	```xml
 	<yweather:location city="Singapore" region="" country="Singapore"/>
 	```
-	
-	Wind speed:
-	
+
+Wind speed:
+
 	```xml
 	<yweather:wind chill="29" direction="50" speed="12.87"/>
 	```
-	
-	Humidity value and visibility value:
-	
+
+Humidity value and visibility value:
+
 	```xml
 	<yweather:atmosphere humidity="79" visibility="9.99" pressure="982.05" rising="1"/>
 	```
-	
-	Current temp(temputer), code(weather icon code) and text(weather description):
-	
+
+Current temp(temputer), code(weather icon code) and text(weather description):
+
 	```xml
 	<yweather:condition text="Mostly Cloudy" code="27" temp="29" date="Sat, 12 Mar 2016 10:58 pm SGT"/>
 	```
-	
-	Forecast:
-	
+
+Forecast:
+
 	```xml
 	<yweather:forecast day="Sat" date="12 Mar 2016" low="26" high="31" text="Partly Cloudy" code="29"/>
 	<yweather:forecast day="Sun" date="13 Mar 2016" low="26" high="33" text="Thunderstorms" code="4"/>
@@ -148,32 +148,31 @@ The weather application is a java project, and its structure as below :
 	<yweather:forecast day="Tue" date="15 Mar 2016" low="26" high="34" text="Partly Cloudy" code="30"/>
 	<yweather:forecast day="Wed" date="16 Mar 2016" low="26" high="34" text="Partly Cloudy" code="30"/>
 	```
-	
-	Second, if we get the city code, then we can get the city weather detail.
-	
+
+Second, if we get the city code, then we can get the city weather detail.
+
 	> How can we get the city code?
-	
-	We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click 'Enter'.
-	
-	Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(1062617) from URL.
-	
+
+We go to the [`Yahoo Weather`](https://weather.yahoo.com/) website : [`https://weather.yahoo.com/`](https://weather.yahoo.com/), and type the city name `singapore` and click 'Enter'.
+
+Then we can go to [`https://weather.yahoo.com/singapore/singapore/singapore-1062617/`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/), then we get the city code(1062617) from URL.
+
 	>But...., There are so many cities in the world, How can we get the city code for each city?
-	
-	We can go to [`https://weather.yahoo.com/singapore/`](https://weather.yahoo.com/singapore/) to find that there are all zones(provinces) of `Singapore`.
-	
-	e.g, [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore/), [`North East`](https://weather.yahoo.com/singapore/north-east/), [`North West`](https://weather.yahoo.com/singapore/north-west/), [`South East`](https://weather.yahoo.com/singapore/south-east/)
-	
-	and we select first one [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore/) and to find that there are all zones(cities) of `Central Singapore`.
-	
-	e.g, [`Bukit Timah`](https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/), [`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/)
-	
-	We can parse the HTML provided by [`https://weather.yahoo.com/singapore/central-singapore/`](https://weather.yahoo.com/singapore/central-singapore/) to get the city code(24703014, 1062617).
-	
+
+We can go to [`https://weather.yahoo.com/singapore/`](https://weather.yahoo.com/singapore/) to find that there are all zones(provinces) of `Singapore`.
+
+e.g, [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore/), [`North East`](https://weather.yahoo.com/singapore/north-east/), [`North West`](https://weather.yahoo.com/singapore/north-west/), [`South East`](https://weather.yahoo.com/singapore/south-east/)
+
+and we select first one [`Central Singapore`](https://weather.yahoo.com/singapore/central-singapore/) and to find that there are all zones(cities) of `Central Singapore`.
+
+e.g, [`Bukit Timah`](https://weather.yahoo.com/singapore/north-west/bukit-timah-24703014/), [`Singapore`](https://weather.yahoo.com/singapore/singapore/singapore-1062617/)
+
+We can parse the HTML provided by [`https://weather.yahoo.com/singapore/central-singapore/`](https://weather.yahoo.com/singapore/central-singapore/) to get the city code(24703014, 1062617).
+
 	> How to prase the HTML string?
-	
-	You can see the method `getCodeString()` in the [`WeatherUtil.java`](https://github.com/Hongten/weather/blob/master/src/com/b510/weather/util/WeatherUtil.java).
-	
-	
+
+You can see the method `getCodeString()` in the [`WeatherUtil.java`](https://github.com/Hongten/weather/blob/master/src/com/b510/weather/util/WeatherUtil.java).
+
 # More Information
 
 * Author            : Hongten
