@@ -59,7 +59,7 @@ The weather application is a java project, and its structure as below :
 
 > How can we get weather details from the [`Yahoo Weather`](https://weather.yahoo.com/)?
 
-First, we need to know the XML file that the [`Yahoo Weather`](https://weather.yahoo.com/)
+First, we need to know the XML file that provided by [`Yahoo Weather`](https://weather.yahoo.com/)
 
 e.g, [http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617](http://xml.weather.yahoo.com/forecastrss?u=c&w=1062617), this URL is get the Singapore weather details.
 The important thing is city code(**1062617**).
