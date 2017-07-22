@@ -7,7 +7,7 @@ and it takes up less CPU resources when it running.
 
 The weather application will update current city weather information once every half hour.
 
-![Example](https://github.com/Hongten/weather/blob/master/image/cpu usage.png)
+![Example](https://github.com/Hongten/weather/blob/master/image/cpu_usage.png)
 
 weather need JDK-1.7 or above.
 
